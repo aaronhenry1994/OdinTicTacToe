@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet"  href="styles.css">
+</head>
+<body id="body">
+    <div id="Title"><h1>Sketchbook</h1></div>
+    <div class="textbox">
+        <input
+        value="16"
+        placeholder="Size of Board"
+        type="text"
+        onchange="changeSize(this.value)"
+        />
+        <button class="buttons">Get Size</button>
+    </div>
+    <div class="container">
+        <div id="grid"></div>
+        <div class="button-board">
+            <button class="buttons" onclick="changeColor('black')">Black</button>
+            <button class="buttons" onclick="changeColor('gray')">Gray</button>
+            <button class="buttons" onclick="changeColor('white')">Erasor</button>
+            <button class="buttons" onclick="clearBoard()">Clear</button>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

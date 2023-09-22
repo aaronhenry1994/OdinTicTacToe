@@ -1,0 +1,273 @@
+#ruby practice
+
+puts "How old are you?"
+age = gets.chomp.to_i
+puts "In 10 years you will be:"
+puts age + 10
+puts "In 20 years you will be:"
+puts age + 20
+puts "In 30 years you will be:"
+puts age + 30
+puts "In 40 years you will be:"
+puts age + 40
+
+# name.rb
+puts "What is your first name?"
+first_name = get.chomp
+puts "What is your last name?"
+last_name = get.chomp
+puts "Hello " + first_name + "" + last_name
+10.times do
+puts first_name
+puts last_name
+end
+
+x = 0
+3.times do
+    x += 1
+end 
+puts x
+
+y = 0
+3.times do
+    y+= 1
+    x = y
+end
+puts x
+
+puts "Hello World!"
+
+x = [1, 2, 3, 4, 5]
+x.each do |a|
+    a +1
+end
+
+=> [1, 2, 3, 4, 5]
+
+x = ""
+while x != "Stop" do
+    puts "Hi, how are you felling?"
+    ans = gets.chompputs "Want me to ask you again?"
+    x = gets.chomp
+end
+
+def counter(number)
+    puts number
+    if number <= 0
+        puts number
+    else
+        puts number
+        counter(number-1)
+    end
+end
+
+arr = [1, 4, 5, 6, 7, 8, 12]
+
+number = 5
+
+if arr.include?(number)
+    puts "#{number} is indeed in the array."
+end
+
+1. arr = ["b", "a"]
+arr =
+arr.product(Araay(1..3))
+
+arr.first.delete(arr.first.last)
+
+2. arr = ["b", "a"]
+arr =
+arr.product(Array(1..3))
+
+arr.first.delete(arr.first.last)
+
+family = { uncles: ["bob", "joe", "steve"] , sisters: ["jane", "jill", "beth"] , brothers: ["frank", "rob", "david"] , aunts: ["mary", "sally", "susan"] }
+
+immediate_family = family.select do |k, v|
+    k == :sisters || k == :brothers
+end
+
+arr = immediate_family.values.flatten
+
+p arr
+
+irb :001 > new_hash = {name: 'bob'}
+=> {:names=> 'bob'}
+irb :002 > person = { height: '6 ft', weight: '160 lbs'}
+=> {:height=> '6 ft', :weight=> '160 lbs'}
+
+irb :003 > person.merge!(new_hash)
+=> {:height=> '6 ft',
+:weight=> '160 lbs',
+:hair=> 'brown', :name=> 'bob'}
+
+irb :001 > new_hash = {name: 'bob'}
+=> {:names=> 'bob'}
+irb :002 > person = { height: '6 ft', weight: '160 lbs'}
+=> {:height=> '6 ft', :weight=> '160 lbs'}
+
+irb :003 > person.merge(new_hash)
+=> {:height=> '6 ft',
+:weight=> '160 lbs',
+:hair=> 'brown', :name=> 'bob'}
+
+what_it_does=> 'Using merge without the ! suffix does not modify the hashes'
+
+opposites = {cat: "dog", up: "down", left: "right"}
+
+opposites.each_key { |key| puts key}
+opposites.each_value {|value| puts value}
+opposites.each {|key, value| puts "The opposite of #{key} is #{value}"}
+
+person = {name: 'Bob', occupation: 'web developer', hobbies: 'painting'}
+
+person[:name]
+
+#practice exercises
+
+#select
+
+family = {uncles: ["bob", "joe", "steve"]
+sisters: ["jane", "jill", "beth"]
+brothers: ["frank", "rob", "david"]
+aunts: ["mary", "sally", "susan"]}
+
+immediate_family = family.select do |k, v|
+    k == :brothers || k == :sisters
+end
+
+arr = immediate_family.values.flatten
+
+p arr
+
+#merge
+
+dog = {name: "spot"}
+weight = {weight: "14 lbs"}
+puts dog.merge(weight)
+puts dog
+
+cat = {name: "fido"}
+weight = {weight: "20 lbs"}
+puts cat.merge!(weight)
+puts cat
+
+#question 3 built in hash methods
+
+books = {
+    fantasy: "Inheiritance Cycle",
+    reality: "The Art of Power"
+}
+
+books.each_key { |key| puts key}
+books.each_value { |value| puts value}
+
+#question 4
+
+person = {name: "Bob", occupation: "web developer", hobbies: "painting"}
+
+person[:name]
+
+#question 5 checking to see if a Hash has a value in it
+
+if books.value? ("Inheiritance Cycle")
+    puts "Gots it!"
+else
+    puts "Nope!"
+end
+
+#question 6 difference between hases
+
+x = "Hi there"
+my_hash = {x: "some value"}
+my_hash2 = {x => "some value"}
+
+#One uses the symbol method, while the other uses the older hash rocket method.
+
+#question 7
+
+#"NoMethodError: undefined method 'keys' for Array"
+
+#There is no method called key for Array objects
+
+#Project One
+def cesar_cipher(string, number)
+    letters = ('a'..'z').to_a
+
+    string.chars.map {|x| letters.include?(x.downcase) ? letters[letters.find_index(x.downcase) + number - letters.size] : x}.join
+end
+xcÍ
+put cesar_cipher('what a string!', 5)
+
+#Project Two
+
+def substrings(word, dictionary)
+    dictionary.each |word, times|
+     
+end
+
+dictionary = ["below", "down", "go", "going", "horn", "how", "howdy", "it", "i", "low", "own", "part", "partner", "sit"]
+
+#Project Three Stock Picker
+
+stock_prices = [17, 3, 6, 9, 15, 8, 6, 1, 10]
+
+def stock_picker(lowest_early_stock, highest_later_stock)
+    
+    profit = highest_later_stock - lowest_early_stock
+
+    puts "Buy on day 2 and sell on day 5"
+    puts profit
+end
+
+puts stock_picker(stock_prices[2], stock_prices[4])
+
+#Project Four Bubble Sort
+
+unsorted_array = [4, 2, 5, 7, 3]
+
+def bubble_sort(array)
+
+    num = arr.length
+
+    loop do
+
+        sorted = false
+
+        (num - 1).times do |i|
+            if arr[i] > arr[i + 1]
+                arr[i], arr[i +1] = arr[i + 1], arr[1]
+            end
+        end
+        break if not sorted
+    end
+    arr
+end
+
+puts bubble_sort(unsorted_array)
+
+class Sports
+end
+
+yoga = Sports.new
+
+module Gear
+    def gear(stuff)
+        puts stuff
+    end
+end
+
+class Sports
+    include Gear
+end
+
+class Work
+    include Gear
+end
+
+football = Sports.new
+football.gear("kneepads")
+
+developer = Work.new
+developer.gear('laptop')
+

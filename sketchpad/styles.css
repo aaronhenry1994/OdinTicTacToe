@@ -1,0 +1,32 @@
+#grid{
+   width: 500px;
+   height: 500px;
+   display: grid;
+   border: 3px solid black;
+}
+
+#body{
+   background-color: red;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.button-board{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+.textbox{
+   display: flex;
+   justify-content: center;
+   padding-bottom: 10px;
+}
+
+.buttons{
+   border: 1px solid black;
+}

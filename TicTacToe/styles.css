@@ -1,0 +1,39 @@
+.board {
+    display: flex;
+    border: 1px solid black;
+    height: 250px;
+    background-color: lightskyblue;
+    gap: 10px;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+.gameSpace {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3 minmax(1fr, 500px));
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.form {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    background-color: blue;
+    padding: 10px;
+}
+
+.btnSpace {
+    background-color: black;
+    padding: 7px;
+}
+
+.emptyBtn {
+    height: 50px;
+    width: 50px;
+    background-color: lightskyblue;
+    border: none;
+    cursor: pointer;
+}
